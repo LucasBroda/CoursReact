@@ -1,7 +1,8 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Bouton from './components/Bouton'
+import Bouton from '@components/Bouton';
+import ListCount from '@components/ListCount';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <h1>Vite + React</h1>
       <div className="card">
         <Bouton />
+        <ListCount />
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
