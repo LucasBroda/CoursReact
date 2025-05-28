@@ -12,8 +12,16 @@ interface TodoAction {
   payload?: any;
 }
 
+// Données fictives pour initialiser le state
+const initialTodos: Todo[] = [
+  { id: '1', label: 'Buy groceries', tag: 'Personal', deadline: new Date(2025, 4, 30), completed: false },
+  { id: '2', label: 'Finish project', tag: 'Work', deadline: new Date(2025, 5, 5), completed: true },
+  { id: '3', label: 'Call mom', tag: 'Personal', deadline: new Date(2025, 5, 1), completed: false },
+  { id: '4', label: 'Team meeting', tag: 'Work', deadline: new Date(2025, 5, 2), completed: true },
+];
+
 const initialState: TodoState = {
-  todos: [],
+  todos: initialTodos,
   filter: 'all',
 };
 
