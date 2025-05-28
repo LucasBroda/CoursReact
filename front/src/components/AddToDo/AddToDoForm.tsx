@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { TodoContext } from '../context/TodoContext';
+import { TodoContext } from '../../context/ToDoContext';
 
 const AddTodoForm: React.FC = () => {
   const { addTodo } = useContext(TodoContext);
@@ -10,7 +10,13 @@ const AddTodoForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (label && tag && deadline) {
-      addTodo({ label, tag, deadline, completed: false });
+      addTodo({
+        id: Date.now().toString(),
+        label,
+        tag,
+        deadline: new Date(deadline),
+        completed: false,
+      });
       setLabel('');
       setTag('');
       setDeadline('');
