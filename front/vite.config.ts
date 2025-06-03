@@ -9,12 +9,17 @@ const __dirname = dirname(__filename)
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  test: {
+    environment: 'jsdom',
+    setupFiles: './src/__tests__/setup.js',
+    globals: true,
+  },
   resolve: {
     alias: {
-      '@layouts': resolve(__dirname, './src/layouts'),
+      '@layout': resolve(__dirname, './src/layout'),
       '@services': resolve(__dirname, './src/services'),
       '@components': resolve(__dirname, './src/components'),
       '@pages': resolve(__dirname, './src/pages'),
     }
   },
-})
+} as UserConfig)

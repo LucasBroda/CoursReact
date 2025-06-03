@@ -1,22 +1,20 @@
-import { TodoProvider } from './context/ToDoContext';
-import AddTodoForm from '@components/AddToDo';
-import FilterTodos from '@components/FilterToDo';
-import TodoTable from '@components/ToDoTable';
-import './App.css';
+import Dashboard from '@pages/Dashboard';
+import About from '@pages/About';
+import Details from '@pages/Details';
+import MainLayout from '@layout/MainLayout';
+import { Routes, Route } from "react-router";
 
 function App() {
-
   return (
-  <TodoProvider>
-      <div className="app">
-        <h1>To-Do List</h1>
-        <AddTodoForm />
-        <FilterTodos />
-        <TodoTable />
-      </div>
-  </TodoProvider>
-  )
+    <Routes>
+      <Route path="/" element={<MainLayout />}>
+        <Route path="/about" element={<About />} />
+        <Route path="/details/:id/:test" element={<Details />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Route>
+    </Routes>
 
+  )
 }
 
 export default App
