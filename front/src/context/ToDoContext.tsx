@@ -18,6 +18,10 @@ const initialTodos: Todo[] = [
   { id: '2', label: 'Finish project', tag: 'Work', deadline: new Date(2025, 5, 5), completed: true },
   { id: '3', label: 'Call mom', tag: 'Personal', deadline: new Date(2025, 5, 1), completed: false },
   { id: '4', label: 'Team meeting', tag: 'Work', deadline: new Date(2025, 5, 2), completed: true },
+  { id: '5', label: 'Gym session', tag: 'Health', deadline: new Date(2025, 5, 3), completed: false },
+  { id: '6', label: 'Read a book', tag: 'Personal', deadline: new Date(2025, 5, 4), completed: false },
+  { id: '7', label: 'Submit report', tag: 'Work', deadline: new Date(2025, 5, 6), completed: true },
+  { id: '8', label: 'Plan vacation', tag: 'Personal', deadline: new Date(2025, 5, 7), completed: false },
 ];
 
 const initialState: TodoState = {
