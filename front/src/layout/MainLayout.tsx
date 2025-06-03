@@ -16,6 +16,9 @@ const MainLayout = () => (
           <li>
             <Link to="details/42">Details</Link>
           </li>
+          <li>
+            <Link to="dashboard">DashBoard</Link>
+          </li>
         </ul>
       </nav>
     </header>

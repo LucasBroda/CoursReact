@@ -7,10 +7,11 @@ import { Routes, Route } from "react-router";
 function App() {
   return (
     <Routes>
-      <Route element={<MainLayout />}>
-        <Route path="/" element={<Dashboard />} />
+      <Route path="/" element={<MainLayout />}>
+        <Route path="/" element={< MainLayout/>} />
         <Route path="/about" element={<About />} />
         <Route path="/details/:id/:test" element={<Details />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Route>
     </Routes>
 
