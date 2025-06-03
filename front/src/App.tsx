@@ -1,7 +1,7 @@
 import Dashboard from '@pages/Dashboard';
 import About from '@pages/About';
 import Details from '@pages/Details';
-import MainLayout from "@layout/MainLayout";
+import MainLayout from '@layout/MainLayout';
 import { Routes, Route } from "react-router";
 
 function App() {

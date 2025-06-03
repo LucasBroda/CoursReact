@@ -1,5 +1,5 @@
 import { Outlet, Link } from "react-router";
-import style from "./mainLayout.module.scss";
+import style from "./mainlayout.module.scss";
 
 const MainLayout = () => (
   <div className={style.layout}>
