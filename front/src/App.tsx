@@ -1,34 +1,22 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Bouton from '@components/Bouton';
-import ListCount from '@components/ListCount';
+import { TodoProvider } from './context/ToDoContext';
+import AddTodoForm from '@components/AddToDo';
+import FilterTodos from '@components/FilterToDo';
+import TodoTable from '@components/ToDoTable';
+import './App.css';
 
 function App() {
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+  <TodoProvider>
+      <div className="app">
+        <h1>To-Do List</h1>
+        <AddTodoForm />
+        <FilterTodos />
+        <TodoTable />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <Bouton />
-        <ListCount />
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+  </TodoProvider>
   )
+
 }
 
 export default App
